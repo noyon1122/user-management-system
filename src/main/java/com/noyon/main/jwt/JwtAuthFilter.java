@@ -53,7 +53,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 			if(jwtTokenUnit.isValid(token, userDetails))
 				
 			{
-				System.out.println("From jwt token is valid from jwtAuth filter class");
+				
 				UsernamePasswordAuthenticationToken authenticationToken=new
 						UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
 				

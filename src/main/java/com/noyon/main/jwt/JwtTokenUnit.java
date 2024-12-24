@@ -90,7 +90,7 @@ public class JwtTokenUnit {
 	 //check the token is valid or not
 	public boolean isValid(String token,UserDetails user)
 	{
-		
+	
 		String username=extractUsername(token);
 		
 		boolean validToken=tokenRepo.findByToken(token).map(t -> !t.isLogout()).orElse(false);
